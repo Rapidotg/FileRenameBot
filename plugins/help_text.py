@@ -47,9 +47,9 @@ async def help_user(bot, update):
                return
         except UserNotParticipant:
             await update.reply_text(
-                text="**Due To The Huge Traffic Only Channel Members Can Use This Bot Means You Need To Join The Below Mentioned Channel Before Using Me! **",
+                text="**Join my holy Updates channel to useme Vruh! **",
                 reply_markup=InlineKeyboardMarkup([
-                    [ InlineKeyboardButton(text="Join My Updates Channel", url=f"https://t.me/{update_channel}")]
+                    [ InlineKeyboardButton(text="CLick this sacred button to join", url=f"https://t.me/{update_channel}")]
               ])
             )
             return
@@ -84,13 +84,13 @@ async def start_me(bot, update):
         try:
             user = await bot.get_chat_member(update_channel, update.chat.id)
             if user.status == "kicked":
-               await update.reply_text(" Sorry,You've Been Flooding Me So My Owner Removed You From Using Me If You Think It's An Error Contact : @Faris_TG")
+               await update.reply_text(" Sorry,You've Been Flooding Me So My Owner Removed You From Using Me If You Think It's An Error Contact : @JawRipper")
                return
         except UserNotParticipant:
             await update.reply_text(
-                text="**Due To The Huge Traffic Only Channel Members Can Use This Bot Means You Need To Join The Below Mentioned Channel Before Using Me! **",
+                text="**Join my holy Updates channel to useme Vruh!  **",
                 reply_markup=InlineKeyboardMarkup([
-                    [ InlineKeyboardButton(text="Join My Updates Channel", url=f"https://t.me/{update_channel}")]
+                    [ InlineKeyboardButton(text="CLick this sacred button to join", url=f"https://t.me/{update_channel}")]
               ])
             )
             return
@@ -103,10 +103,10 @@ async def start_me(bot, update):
                 ],
                 [
                     InlineKeyboardButton('Support Channel', url='https://t.me/X_Ro_Bots'),
-                    InlineKeyboardButton('Dev', url='https://t.me/JawRipper')
+                    InlineKeyboardButton('Dᴇᴠ', url='https://t.me/JawRipper')
                 ],
                 [
-                    InlineKeyboardButton('Sudo', url='https://t.me/Mooruto'),
+                    InlineKeyboardButton('Sᴜᴅᴏ', url='https://t.me/Mooruto'),
                     InlineKeyboardButton('Source', url='https://github.com/Rapidotg/FileRenameBot')
                 ]
             ]
@@ -115,7 +115,7 @@ async def start_me(bot, update):
     )
             return 
 
-@X_Ro_Botss.on_callback_query()
+@JawRipper.on_callback_query()
 async def cb_handler(client: Mai_bOTs , query: CallbackQuery):
     data = query.data
     if data == "rnme":
