@@ -36,7 +36,7 @@ from database.database import *
 from database.db import *
 
 
-@Mai_bOTs.on_message(pyrogram.filters.command(["help"]))
+@JawRipper.on_message(pyrogram.filters.command(["help"]))
 async def help_user(bot, update):
     update_channel = Config.UPDATE_CHANNEL
     if update_channel:
@@ -74,7 +74,7 @@ async def help_user(bot, update):
         )
     )       
 
-@Mai_bOTs.on_message(pyrogram.filters.command(["start"]))
+@JawRipper.on_message(pyrogram.filters.command(["start"]))
 async def start_me(bot, update):
     if update.from_user.id in Config.BANNED_USERS:
         await update.reply_text("You are Banned")
@@ -102,12 +102,12 @@ async def start_me(bot, update):
                         InlineKeyboardButton("Help", callback_data = "ghelp")
                 ],
                 [
-                    InlineKeyboardButton('Support Channel', url='https://t.me/Mai_bOTs'),
-                    InlineKeyboardButton('Feedback', url='https://t.me/No_OnE_Kn0wS_Me')
+                    InlineKeyboardButton('Support Channel', url='https://t.me/X_Ro_Bots'),
+                    InlineKeyboardButton('Dev', url='https://t.me/JawRipper')
                 ],
                 [
-                    InlineKeyboardButton('Other Bots', url='https://t.me/Mai_bOTs/17'),
-                    InlineKeyboardButton('Source', url='https://github.com/No-OnE-Kn0wS-Me/FileRenameBot')
+                    InlineKeyboardButton('Sudo', url='https://t.me/Mooruto'),
+                    InlineKeyboardButton('Source', url='https://github.com/Rapidotg/FileRenameBot')
                 ]
             ]
         ),
@@ -115,7 +115,7 @@ async def start_me(bot, update):
     )
             return 
 
-@Mai_bOTs.on_callback_query()
+@X_Ro_Botss.on_callback_query()
 async def cb_handler(client: Mai_bOTs , query: CallbackQuery):
     data = query.data
     if data == "rnme":
