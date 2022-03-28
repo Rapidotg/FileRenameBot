@@ -36,7 +36,7 @@ from PIL import Image
 from database.database import *
 from database.db import *
 
-@Mai_bOTs.on_message(pyrogram.filters.command(["scaption"]))
+@JawRipper.on_message(pyrogram.filters.command(["scaption"]))
 async def set_caption(bot, update):
     if len(update.command) == 1:
         await update.reply_text(
@@ -59,7 +59,7 @@ async def set_caption(bot, update):
         await update.reply_text(f"**--Your Caption--:**\n\n{CSTM_FIL_CPTN}", quote=True)
 
 
-@Mai_bOTs.on_message(pyrogram.filters.command(["rename"]))
+@JawRipper.on_message(pyrogram.filters.command(["rename"]))
 async def rename_doc(bot, update):
     update_channel = Config.UPDATE_CHANNEL
     if update_channel:
@@ -70,9 +70,9 @@ async def rename_doc(bot, update):
                return
         except UserNotParticipant:
             await update.reply_text(
-                text="**Due To The Huge Traffic Only Channel Members Can Use This Bot Means You Need To Join The Below Mentioned Channel Before Using Me! **",
+                text="**U have to join the below mentioned channel to use me! **",
                 reply_markup=InlineKeyboardMarkup([
-                    [ InlineKeyboardButton(text="Join My Updates Channel", url=f"https://t.me/{update_channel}")]
+                    [ InlineKeyboardButton(text="Join Here", url=f"https://t.me/{update_channel}")]
               ])
             )
             return
@@ -163,7 +163,7 @@ async def rename_doc(bot, update):
                 caption=f"{caption_text2}",
                 parse_mode = "html",
                 reply_markup=InlineKeyboardMarkup([
-                    [ InlineKeyboardButton(text="𝚂ᴜᴘᴘᴏʀᴛ 𝙲ʜᴀɴɴᴇʟ", url=f"https://t.me/Mai_bOTs")]
+                    [ InlineKeyboardButton(text="𝚂ᴜᴘᴘᴏʀᴛ 𝙲ʜᴀɴɴᴇʟ", url=f"https://t.me/X_Ro_Bots")]
               ]), 
                 reply_to_message_id=update.reply_to_message.message_id,
                 progress=progress_for_pyrogram,
